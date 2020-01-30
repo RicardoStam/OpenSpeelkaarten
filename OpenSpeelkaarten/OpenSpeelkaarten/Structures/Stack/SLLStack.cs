@@ -7,27 +7,29 @@ namespace OpenSpeelkaarten.Structures.Stack
     {
         public SLLStack()
         {
-            throw new NotImplementedException();
+            elements = new SingleLinkedList<T>();
         }
 
         public override bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return elements.IsEmpty();
         }
 
         public override T Peek()
         {
-            throw new NotImplementedException();
+            return elements.GetHeadValue();
         }
 
         public override T Pop()
         {
-            throw new NotImplementedException();
+            T tmp = elements.GetHeadValue();
+            elements.DeleteHead();
+            return tmp;
         }
 
         public override void Push(T value)
         {
-            throw new NotImplementedException();
+            elements.Insert(value);
         }
     }
 }

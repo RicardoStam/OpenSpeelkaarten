@@ -6,7 +6,9 @@ namespace OpenSpeelkaarten.Structures.Nodes.SingleLinkedListNodes
     {
         public SLLNode(T value, ISingleLinkedListNode<T> tail)
         {
-            throw new NotImplementedException();
+            this.value = value;
+            this.tail = tail;
+            isEmpty = true;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace OpenSpeelkaarten.Structures.Stack
         /// Creates a new deck.
         /// </summary>
         /// <param name="shuffle"> True for a shuffled deck else false.</param>
-        public Deck(bool shuffle = true )
+        public Deck(bool shuffle = true)
         {
             if (shuffle)
             {

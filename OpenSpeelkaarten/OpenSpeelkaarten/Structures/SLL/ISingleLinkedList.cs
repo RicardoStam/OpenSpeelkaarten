@@ -44,6 +44,8 @@ namespace OpenSpeelkaarten.Structures.SLL
         /// </summary>
         void Display();
 
+        bool IsEmpty();
+
         T GetHeadValue();
 
         T GetEndValue();

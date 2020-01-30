@@ -9,47 +9,99 @@ namespace OpenSpeelkaarten.Structures.SLL
 
         public void DeleteEnd()
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head, tmp1 = head;
+
+            while (!tmp.GetNext().IsEmpty())
+            {
+                tmp1 = tmp;
+                tmp = tmp.GetNext();
+            }
+            tmp1.SetTail(tmp.GetNext());
+            tmp.Disconnect();
         }
         
+
         public void DeleteHead()
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head;
+            head = head.GetNext();
+            tmp.Disconnect();
         }
 
         public void DeleteSpecific(T value)
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head, tmp1 = head;
+
+            while (Equals(tmp.GetValue(),value))
+            {
+                tmp1 = tmp;
+                tmp = tmp.GetNext();
+            }
+            if (tmp.IsEmpty()) throw new Exception("Number not present in the list.");
+
+            tmp1.SetTail(tmp.GetNext());
+            tmp.Disconnect();
         }
 
         public void Display()
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head;
+
+            while (!tmp.IsEmpty())
+            {
+                Console.WriteLine(tmp.GetValue().ToString());
+            }
+            Console.WriteLine("empty node");
         }
 
         public void InsertAfter(T value, T targetValue)
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head, tmp1 = head;
+
+            while (Equals(tmp.GetValue(), targetValue))
+            {
+                tmp1 = tmp;
+                tmp = tmp.GetNext();
+            }
+            if (tmp.IsEmpty()) throw new Exception("Number not present in the list.");
+            tmp.SetTail(new SLLNode<T>(value, tmp.GetNext()));
         }
 
         public void Insert(T value)
         {
-            throw new NotImplementedException();
+            head = new SLLNode<T>(value, head);
         }
 
         public void InsertAtEnd(T value)
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head;
+
+            while (!tmp.GetNext().IsEmpty())
+            { 
+                tmp = tmp.GetNext();
+            }
+            tmp.SetTail(new SLLNode<T>(value, tmp.GetNext()));
         }
 
         public T GetHeadValue()
         {
-            throw new NotImplementedException();
+            return head.GetValue();
         }
 
         public T GetEndValue()
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> tmp = head;
+
+            while (!tmp.GetNext().IsEmpty())
+            {
+                tmp = tmp.GetNext();
+            }
+            return tmp.GetValue();
+        }
+
+        public bool IsEmpty()
+        {
+            return head.IsEmpty();
         }
     }
 }

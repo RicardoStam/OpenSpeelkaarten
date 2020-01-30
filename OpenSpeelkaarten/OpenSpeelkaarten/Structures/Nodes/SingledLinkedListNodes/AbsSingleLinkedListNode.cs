@@ -10,27 +10,27 @@ namespace OpenSpeelkaarten.Structures.Nodes.SingleLinkedListNodes
 
         public void Disconnect()
         {
-            throw new NotImplementedException();
+            tail = null;
         }
 
         public ISingleLinkedListNode<T> GetNext()
         {
-            throw new NotImplementedException();
+            return tail;
         }
 
         public T GetValue()
         {
-            throw new NotImplementedException();
+            return value;
         }
 
         public bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return isEmpty;
         }
 
         public void SetTail(ISingleLinkedListNode<T> tail)
         {
-            throw new NotImplementedException();
+            this.tail = tail;
         }
     }
 }

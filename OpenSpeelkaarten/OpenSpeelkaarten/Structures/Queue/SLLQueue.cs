@@ -7,12 +7,14 @@ namespace OpenSpeelkaarten.Structures.Queue
     {
         public SLLQueue()
         {
-            throw new NotImplementedException();
+            elements = new SingleLinkedList<T>();
         }
 
         public override T Dequeue()
         {
-            throw new NotImplementedException();
+            T tmp = elements.GetEndValue();
+            elements.DeleteEnd();
+            return tmp;
         }
 
         public override void Display()
@@ -22,7 +24,7 @@ namespace OpenSpeelkaarten.Structures.Queue
 
         public override void Enqueue(T value)
         {
-            throw new NotImplementedException();
+            elements.Insert(value);
         }
     }
 }

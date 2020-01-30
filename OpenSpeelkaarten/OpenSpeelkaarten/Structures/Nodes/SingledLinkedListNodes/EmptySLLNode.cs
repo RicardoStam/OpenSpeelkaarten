@@ -6,7 +6,7 @@ namespace OpenSpeelkaarten.Structures.Nodes.SingleLinkedListNodes
     {
         public EmptySLLNode() 
         {
-            throw new NotImplementedException();
+            isEmpty = true;
         }
     }
 }
