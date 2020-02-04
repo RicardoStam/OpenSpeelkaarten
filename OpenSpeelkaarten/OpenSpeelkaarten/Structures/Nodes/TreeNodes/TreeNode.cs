@@ -6,7 +6,8 @@ namespace OpenSpeelkaarten.Structures.Nodes.TreeNodes
     {
         public TreeNode(T value, ITreeNode<T> parent = null)
         {
-            throw new NotImplementedException();
+            this.value = value;
+            this.parent = parent;
         }
     }
 }

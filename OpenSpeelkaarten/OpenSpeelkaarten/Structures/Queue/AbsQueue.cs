@@ -6,8 +6,6 @@
 
         abstract public T Dequeue();
 
-        abstract public void Display();
-
         abstract public void Enqueue(T value);
     }
 }

@@ -9,47 +9,49 @@ namespace OpenSpeelkaarten.Structures.Nodes.TreeNodes
 
         public void Disconnect()
         {
-            throw new NotImplementedException();
+             parent = null;
+             leftChild = null;
+             rightChild = null;
         }
 
         public ITreeNode<T> GetLeftChild()
         {
-            throw new NotImplementedException();
+            return leftChild();
         }
 
         public ITreeNode<T> GetParent()
         {
-            throw new NotImplementedException();
+            return parent;
         }
 
         public ITreeNode<T> GetRightChild()
         {
-            throw new NotImplementedException();
+            return rightChild;
         }
 
         public T GetValue()
         {
-            throw new NotImplementedException();
+            return value;
         }
 
         public bool IsLeaf()
         {
-            throw new NotImplementedException();
+            return leftChild == null && rightChild == null;
         }
 
         public void SetLeftChild(ITreeNode<T> node)
         {
-            throw new NotImplementedException();
+            leftChild = node;
         }
 
         public void SetPartent(ITreeNode<T> node)
         {
-            throw new NotImplementedException();
+            parent = node;
         }
 
         public void SetRightChild(ITreeNode<T> node)
         {
-            throw new NotImplementedException();
+            rightChild = node;
         }
     }
 }

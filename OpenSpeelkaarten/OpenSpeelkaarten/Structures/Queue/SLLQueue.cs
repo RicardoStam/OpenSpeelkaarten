@@ -17,11 +17,6 @@ namespace OpenSpeelkaarten.Structures.Queue
             return tmp;
         }
 
-        public override void Display()
-        {
-            throw new NotImplementedException();
-        }
-
         public override void Enqueue(T value)
         {
             elements.Insert(value);
