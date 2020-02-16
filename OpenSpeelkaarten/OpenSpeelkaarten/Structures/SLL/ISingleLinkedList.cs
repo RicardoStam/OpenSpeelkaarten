@@ -22,6 +22,13 @@ namespace OpenSpeelkaarten.Structures.SLL
         /// <param name="value">Value which will be added to the SLL.</param>
         /// <param name="targetValue">The value afterwhich "value" will be added.</param>
         void InsertAfter(T value, T targetValue);
+
+        /// <summary>
+        /// Adds a value before a specific value already contained in the SLL.
+        /// </summary>
+        /// <param name="value">Value which will be added to the SLL.</param>
+        /// <param name="targetValue">The target value before the "value" will be added.</param>
+        void InsertBefore(T value, T targetValue);
         
         /// <summary>
         /// Removes the head of the SLL.
@@ -44,8 +51,20 @@ namespace OpenSpeelkaarten.Structures.SLL
         /// </summary>
         void Display();
 
+        /// <summary>
+        /// Returns the head value kept within the SLL.
+        /// </summary>        
         T GetHeadValue();
 
+        /// <summary>
+        /// Returns the head value kept within the SLL.
+        /// </summary>   
         T GetEndValue();
+
+        /// <summary>
+        /// Returns the value kept at a certain index within the SLL.
+        /// index 0 == head
+        /// </summary>   
+        T GetIndexValue(int index);
     }
 }

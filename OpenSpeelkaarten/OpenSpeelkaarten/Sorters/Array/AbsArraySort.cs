@@ -7,7 +7,17 @@ namespace OpenSpeelkaarten.Sorters.Array
     {
         protected IComparator<T> comparator;
 
+        public T[] BubbleSort(T[] list)
+        {
+            throw new NotImplementedException();
+        }
+
         public T[] InsertionSort(T[] list)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T[] MergeSort(T[] list, int leftIndex, int rightIndex)
         {
             throw new NotImplementedException();
         }

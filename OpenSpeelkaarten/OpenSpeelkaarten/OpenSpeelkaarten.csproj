@@ -84,9 +84,6 @@
     <Compile Include="Structures\Tree\AbsTree.cs" />
     <Compile Include="Structures\Tree\ITree.cs" />
     <Compile Include="Structures\Tree\Tree.cs" />
-    <Compile Include="Tests\AbsTests.cs" />
-    <Compile Include="Tests\CardTests.cs" />
-    <Compile Include="Tests\ITests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

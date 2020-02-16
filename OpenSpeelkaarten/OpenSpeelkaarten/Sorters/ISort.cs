@@ -8,5 +8,9 @@
         /// <param name="list">The list you would like to sort.</param>
         /// <returns>New list with the same type as the input list.</returns>
         L InsertionSort(L list);
+
+        L MergeSort(L list, int leftIndex, int rightIndex);
+
+        L BubbleSort(L list);
     }
 }

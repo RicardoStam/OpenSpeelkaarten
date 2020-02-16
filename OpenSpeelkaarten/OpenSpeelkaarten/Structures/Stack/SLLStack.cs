@@ -9,25 +9,29 @@ namespace OpenSpeelkaarten.Structures.Stack
         {
             throw new NotImplementedException();
         }
-
-        public override bool IsEmpty()
+        // Insertion
+        public override void Push(T value)
         {
             throw new NotImplementedException();
         }
-
-        public override T Peek()
-        {
-            throw new NotImplementedException();
-        }
-
+        
+        // Deletion
         public override T Pop()
         {
             throw new NotImplementedException();
         }
 
-        public override void Push(T value)
+        // Get value
+        public override T Peek()
         {
             throw new NotImplementedException();
         }
+
+        // Misc
+        public override bool IsEmpty()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
