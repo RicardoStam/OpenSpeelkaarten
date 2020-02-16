@@ -52,6 +52,7 @@ namespace OpenSpeelkaarten
             {
                 fstHand.Insert(shuffledDeck.Pop());
                 sndHand.Insert(unshuffledDeck.Pop());
+                index++;
             }
 
             fstHand.Display();
