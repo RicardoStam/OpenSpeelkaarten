@@ -141,5 +141,9 @@ namespace OpenSpeelkaarten.Structures.SLL
             }
         }
 
+        public bool IsEmpty()
+        {
+            return head.IsEmpty();
+        }
     }
 }

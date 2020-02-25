@@ -66,5 +66,7 @@ namespace OpenSpeelkaarten.Structures.SLL
         /// index 0 == head
         /// </summary>   
         T GetIndexValue(int index);
+
+        bool IsEmpty();
     }
 }
