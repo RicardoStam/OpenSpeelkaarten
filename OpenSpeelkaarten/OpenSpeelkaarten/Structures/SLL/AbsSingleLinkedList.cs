@@ -53,15 +53,41 @@ namespace OpenSpeelkaarten.Structures.SLL
         // Deletion
         public void DeleteEnd()
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else if (head.GetNext().IsEmpty()) DeleteHead();
+            {
+                ISingleLinkedListNode<T> actual = head, before = head;
+                while (!actual.GetNext().IsEmpty())
+                {
+                    before = actual;
+                    actual = actual.GetNext();
+                }
+                before.SetTail(actual.GetNext());
+                actual.Disconnect();
+            }
         }
         public void DeleteHead()
         {
-            throw new NotImplementedException();
+            ISingleLinkedListNode<T> temp = head;
+            head = head.GetNext();
+            temp.Disconnect();
         }
         public void DeleteSpecific(T value)
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else if (Equals(head.GetValue(), value)) DeleteHead();
+            else
+            {
+                ISingleLinkedListNode<T> actual = head, before = head;
+                while (!actual.IsEmpty() && !Equals(actual.GetValue(), value))
+                {
+                    before = actual;
+                    actual = actual.GetNext();
+                }
+                if (actual.IsEmpty()) throw new Exception("The value is not present within the list.");
+                before.SetTail(actual.GetNext());
+                actual.Disconnect();
+            }
         }
 
         // Get values
