@@ -93,15 +93,34 @@ namespace OpenSpeelkaarten.Structures.SLL
         // Get values
         public T GetHeadValue()
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else return head.GetValue();
         }
         public T GetEndValue()
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else
+            {
+                ISingleLinkedListNode<T> temp = head;
+                while (!temp.GetNext().IsEmpty()) temp = temp.GetNext();
+                return temp.GetValue();
+            }
         }
         public T GetIndexValue(int index)
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else
+            {
+                ISingleLinkedListNode<T> temp = head;
+                int localIndex = 0;
+                while(localIndex != index && !temp.IsEmpty())
+                {
+                    temp = temp.GetNext();
+                    localIndex++;
+                }
+                if (temp.IsEmpty()) throw new Exception("Index is out of bounds.");
+                return temp.GetValue();
+            }
         }
 
         // Printer
