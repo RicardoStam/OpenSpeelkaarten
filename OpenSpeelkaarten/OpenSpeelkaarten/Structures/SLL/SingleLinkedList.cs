@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenSpeelkaarten.Structures.Nodes.SingleLinkedListNodes;
+using System;
 
 namespace OpenSpeelkaarten.Structures.SLL
 {
@@ -6,7 +7,7 @@ namespace OpenSpeelkaarten.Structures.SLL
     {
         public SingleLinkedList()
         {
-            throw new NotImplementedException();
+            head = new EmptySLLNode<T>();
         }
     }
 }

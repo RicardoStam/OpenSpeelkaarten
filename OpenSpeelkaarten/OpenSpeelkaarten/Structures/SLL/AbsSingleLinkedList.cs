@@ -10,7 +10,7 @@ namespace OpenSpeelkaarten.Structures.SLL
         // Insertions
         public void Insert(T value)
         {
-            head = new SLLNode<T>(value, head.GetNext());
+            head = new SLLNode<T>(value, head);
         }
         public void InsertAtEnd(T value)
         {
@@ -109,11 +109,12 @@ namespace OpenSpeelkaarten.Structures.SLL
         public T GetIndexValue(int index)
         {
             if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else if (index < 0) throw new Exception("A index can only be positive.");
             else
             {
                 ISingleLinkedListNode<T> temp = head;
                 int localIndex = 0;
-                while(localIndex != index && !temp.IsEmpty())
+                while (localIndex != index && !temp.IsEmpty())
                 {
                     temp = temp.GetNext();
                     localIndex++;
@@ -126,7 +127,18 @@ namespace OpenSpeelkaarten.Structures.SLL
         // Printer
         public void Display()
         {
-            throw new NotImplementedException();
+            if (head.IsEmpty()) throw new Exception("The list is empty!");
+            else
+            {
+                ISingleLinkedListNode<T> temp = head;
+                Console.WriteLine("Start");
+                while (!temp.IsEmpty())
+                {
+                    Console.WriteLine(temp.GetValue().ToString());
+                    temp = temp.GetNext();
+                }
+                Console.WriteLine("end");
+            }
         }
 
     }
