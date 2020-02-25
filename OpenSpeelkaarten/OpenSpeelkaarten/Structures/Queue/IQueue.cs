@@ -12,7 +12,16 @@
         /// Removes, and returns, the item in the front of the queue.
         /// </summary>
         T Dequeue();
-
+        /// <summary>
+        /// Returns the value in front of the queue
+        /// </summary>
+        /// <returns></returns>
+        T Peek();
+        /// <summary>
+        /// Returns true if the queue is empty or not.
+        /// </summary>
+        /// <returns></returns>
+        bool IsEmpty();
         /// <summary>
         /// Prints the queue.
         /// </summary>

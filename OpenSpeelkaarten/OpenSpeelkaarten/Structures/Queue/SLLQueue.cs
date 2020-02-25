@@ -7,25 +7,37 @@ namespace OpenSpeelkaarten.Structures.Queue
     {
         public SLLQueue()
         {
-            throw new NotImplementedException();
+            elements = new SingleLinkedList<T>();
         }
 
         // Insertion
         public override void Enqueue(T value)
         {
-            throw new NotImplementedException();
+            elements.Insert(value);
         }
 
         // Deletion & Get value
         public override T Dequeue()
         {
-            throw new NotImplementedException();
+            T temp = elements.GetEndValue();
+            elements.DeleteEnd();
+            return temp;
         }
         
         //Printer
         public override void Display()
         {
-            throw new NotImplementedException();
+            elements.Display();
+        }
+
+        public override bool IsEmpty()
+        {
+            return elements.IsEmpty();
+        }
+
+        public override T Peek()
+        {
+            return elements.GetEndValue();
         }
     }
 }

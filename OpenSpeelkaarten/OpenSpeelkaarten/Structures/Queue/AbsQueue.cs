@@ -9,5 +9,9 @@
         abstract public void Display();
 
         abstract public void Enqueue(T value);
+
+        abstract public bool IsEmpty();
+
+        abstract public T Peek();
     }
 }
